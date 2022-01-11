@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
             rel="stylesheet"
@@ -39,9 +39,122 @@
             color: #343a40;
             /*border-bottom: 8px solid #087f5b;*/
         }
+
+        img {
+            height: 200px;
+            border-radius: 8px;
+            transform:scale(1.5);
+            box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+        }
+
+        .carousel{
+            width: 800px;
+            margin:100px auto;
+            background-color: #087f5b;
+            border-radius: 16px;
+            display: flex;
+            /*padding: 32px 48px 32px 86px;*/
+            padding: 32px 48px 32px 86px;
+            position:relative;
+            gap: 86px;
+            align-items: center;
+        }
+        .testimonial-text{
+            color: white;
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+
+        .testimonial-author{
+            color: #e6fcf5;
+        }
+        .testimonial-commercial{
+            color: #e6fcf5;
+        }
+
+        .btn{
+            border:none;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+
+        }
+
+        .btn-icon{
+            width: 24px;
+            height: 24px;
+            stroke: #087f5b;
+
+        }
+
+        .btn--left{
+            top: 50%;
+            left: 0;
+            transform: translate(-50%,-50%);
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        .btn--right{
+            right: 0;
+            top: 50%;
+            transform: translate(50%,-50%);
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .dots{
+            position:absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(0, 32px);
+        }
+        .dot{
+            width: 12px;
+            height: 12px;
+            background-color: white;
+            border: 2px #087f5b solid ;
+            border-radius: 50%;
+        }
+        .dot--fill{
+            background-color: #087f5b;
+        }
     </style>
+
 </head>
 <body>
-
+<div class="carousel">
+    <button class="btn btn--left">
+        <svg xmlns="http://www.w3.org/2000/svg" class="btn-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+    </button>
+    <button class="btn btn--right">
+        <svg xmlns="http://www.w3.org/2000/svg" class="btn-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+    </button>
+    <img src="./maria.jpg" alt="maria">
+    <blockquote class="testimonial-box">
+        <p class="testimonial-text">
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lunt temporibus ut! Cum
+            deleniti dignissimos, ea fugiat in  nesciunt quisquam? Incidunt, ipsa, maxime. Consectetur eum
+            quod ullam."
+        </p>
+        <p class="testimonial-author">Maria the Almeida</p>
+        <p class="testimonial-commercial">
+            Senior Product Manager at EDP Commercial
+        </p>
+    </blockquote>
+    <div class="dots">
+        <button class="dot dot--fill"></button>
+        <button class="dot"></button>
+        <button class="dot"></button>
+        <button class="dot"></button>
+    </div>
+</div>
 </body>
 </html>
