@@ -43,6 +43,78 @@
         /*border-bottom: 8px solid #087f5b;*/
       }
 
+      .accordion {
+        width: 700px;
+        margin: 100px auto;
+        display: flex;
+        flex-direction: column;
+        gap:36px
+      }
+
+      .item{
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 20px;
+        box-shadow: 0 0 24px  rgba(0,0,0,0.1);
+        padding:24px;
+        /*justify-content: center;*/
+        /*justify-items: center;*/
+        align-items: center;
+
+      }
+      .number, .text{
+        color: #343a40;
+        font-size:24px
+      }
+      .text{
+        line-height: 1.6;
+
+      }
+      .icon{
+        width: 24px;
+        height: auto;
+        stroke:#343a40;
+
+      }
+      .hidden-box{
+        display:none;
+
+      }
+      .hidden-box p{
+        font-weight: 500;
+      }
+      .hidden-box ul{
+        margin-left: 20px;
+        color: #868e96;
+      }
+
+
+      .hidden-box ul{
+        display: flex;
+        flex-direction: column;
+        gap:5px;
+        padding-bottom: 16px;
+      }
+
+
+
+      .open{
+        border-top: 5px solid #087f5b;
+
+      }
+      .open .text,
+      .open .icon,
+      .open .number{
+        color: #087f5b;
+        stroke: #087f5b;
+      }
+      .open .hidden-box{
+        display: flex;
+        grid-column: 2;
+        flex-direction:column;
+        gap: 20px;
+      }
+
 
     </style>
   </head>
