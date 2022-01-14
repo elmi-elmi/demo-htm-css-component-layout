@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>App Layout</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing:border-box;
+        }
+        body{
+            height: 100vh;
+            display: grid;
+            grid-template-rows:70px 1fr;
+            grid-template-columns:40px 250px auto 150px;
+            text-align: center;
+            font-weight: bold;
+            /*justify-content: center;*/
+            /*align-items: center;*/
+            /*justify-items: center;*/
+        }
+
+
+        nav{
+            background-color: #868e96;
+            grid-row:1/-1
+        }
+
+        menu{
+            background-color: #91a7ff;
+            grid-column: 2/-1;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0 16px;
+
+        }
+        .menu-btn{
+            height: 36px;
+            border:none;
+            border-radius: 5px;
+            background-color: #15aabf;
+            padding:0 12px;
+            color:white;
+            font-weight: bold;
+            box-shadow: 0 0 4px rgba(0,0,0,0.2);
+
+        }
+        .menu-btn:last-child{
+            margin-left: auto;
+            background-color: #d6336c;
+        }
+        section{
+            background-color: #edf2ff;
+            display: flex;
+            flex-direction:column;
+            justify-content: space-around;
+            gap: 24px;
+            overflow:scroll;
+        }
+        .btn-inbox{
+            height: 44px;
+            flex-shrink: 0;
+            border-radius: 4px;
+            border:none;
+            box-shadow: 0 0 5px rgba(0,0,0, 0.1);
+            margin: 0 10px;
+            font-weight: bold;
+            background-color: #f76707;
+
+        }
+        main{
+            background-color: #fff5f5;
+        }
+        aside{
+            background-color: #e5dbff;
+        }
+    </style>
+</head>
+<body>
+
+<nav>Nav</nav>
+<menu>
+    <button class="menu-btn">New</button>
+    <button class="menu-btn">Reply</button>
+    <button class="menu-btn">Forward</button>
+    <button class="menu-btn">Mark as read</button>
+    <button class="menu-btn">Trash</button>
+</menu>
+<section>
+    <button class="btn-inbox">Email 1</button>
+    <button class="btn-inbox">Email 2</button>
+    <button class="btn-inbox">Email 3</button>
+    <button class="btn-inbox">Email 4</button>
+    <button class="btn-inbox">Email 5</button>
+    <button class="btn-inbox">Email 6</button>
+    <button class="btn-inbox">Email 7</button>
+    <button class="btn-inbox">Email 8</button>
+    <button class="btn-inbox">Email 9</button>
+    <button class="btn-inbox">Email 10</button>
+    <button class="btn-inbox">Email 11</button>
+    <button class="btn-inbox">Email 12</button>
+</section>
+<main>Email View</main>
+<aside>Additional Info</aside>
+
+
+</body>
+</html>
